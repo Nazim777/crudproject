@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%-include('./partials/Header.ejs')%>
+    <title>edit page</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 mt-5">
+                <h1 class="alert alert-success text-center">Update employe data</h1>
+                <form  method="post" action="/update/<%= result._id %>">
+                    
+
+
+                        <div class="mb-3">
+                            <label for="form" class="form-control">name</label>
+                            <input type="text" class="form-control" id="name" name="name" value="<%= result.name%>">
+                        </div>
+                        <div class="mb-3">
+                         <label for="form" class="form-control">position</label>
+                         <input type="text" class="form-control" id="position" name="position" value="<%=result.position%>">
+                     </div>
+                     <div class="mb-3">
+                         <label for="form" class="form-control">salary</label>
+                         <input type="number" class="form-control" id="salary" name="salary" value="<%=result.salary%>">
+                     </div>
+                     <button type="submit" class="btn btn-primary">update</button>
+                     <a href="/"><button type="button"  class="btn btn-secondary">go to home</button></a>
+                     
+
+                  
+                   
+                </form>
+ 
+ 
+            </div>
+ 
+ 
+
+
+ 
+</body>
+</html>
